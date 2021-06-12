@@ -1,0 +1,106 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- mood_unhappy:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- what_can_you_do:
+    use_entities: true
+- what_is_your_name:
+    use_entities: true
+- restaurant:
+    use_entities: true
+- ask_location:
+    use_entities: true
+- dont_know_location:
+    use_entities: true
+- ask_cuisine:
+    use_entities: true
+- no_cuisine_preference:
+    use_entities: true
+- thankyou:
+    use_entities: true
+- current_location:
+    use_entities: true
+- not_restaurant:
+    use_entities: true
+entities:
+- cuisine
+- location
+slots:
+  cuisine:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  restaurants:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  location:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+responses:
+  utter_greet:
+  - text: Hi, i am restaurant-bot.
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye,have a nice day.
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_what_can_you_do:
+  - text: I can help you to find some delicious restaurants according to the location and cuisine of your choice.
+  utter_what_is_your_name:
+  - text: I am restaurant-bot.
+  utter_ask_location:
+  - text: May i know your location?
+  utter_dont_know_location:
+  - text: Sorry,i can't help you with out any specified location.May be you can visit our website for further information.
+  utter_ask_cuisine:
+  - text: What cuisine are you interested in?
+  utter_restaurants:
+  - text: Ok,i will find you some delicious restaurants.
+  utter_no_cuisine_preference:
+  - text: Hmm,then i will check for some restaurants according to your location.
+  utter_welcome:
+  - text: It's my pleasure to help you.Enjoy your dining.
+  utter_when_direct_location:
+  - text: Do you want to search for restuarants?
+  utter_best_cuisine:
+  - text: How about trying italian food?
+  utter_not_best_cuisine:
+  - text: May be you can visit our website  to see any cuisines you like.
+  utter_current_location:
+  - text: switch on your location in your device so that i can take your location.
+  utter_sorry_cuisine:
+  - text: Sorry,I cannot find the results for the cuisine you mentioned.May be you can visit our restaurant for more information.
+  utter_sorry_location:
+  - text: Sorry,our sevice is not available for the location that you provided.
+actions:
+- action_find_restaurants
+forms: {}
+e2e_actions: []
