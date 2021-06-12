@@ -1,0 +1,409 @@
+version: "2.0"
+stories:
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+- story: Finding Restaurants1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: what_can_you_do
+  - action: utter_what_can_you_do
+  - intent: ask_location
+    entities:
+    - cuisine: Indian
+    - location: hyderabad
+  - slot_was_set:
+    - cuisine: Indian
+  - slot_was_set:
+    - location: hyderabad
+  - action: action_find_restaurants
+  - slot_was_set:
+    - restaurants:
+      - urba Tadka
+      - Goilas Butter chicken
+      - Shiv sagar
+  - intent: thankyou
+  - action: utter_welcome
+  - intent: goodbye
+  - action: utter_goodbye
+- story: Finding Restaurants2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: what_is_your_name
+  - action: utter_what_is_your_name
+  - intent: what_can_you_do
+  - action: utter_what_can_you_do
+  - intent: restaurant
+  - action: utter_ask_location
+  - intent: ask_location
+    entities:
+    - location: panaji
+  - slot_was_set:
+    - location: panaji
+  - action: utter_ask_cuisine
+  - intent: ask_cuisine
+    entities:
+    - cuisine: indian
+  - slot_was_set:
+    - location: indian
+  - action: action_find_restaurants
+  - slot_was_set:
+    - restaurants:
+      - urba Tadka
+      - Goilas Butter chicken
+      - Shiv sagar
+  - intent: goodbye
+  - action: utter_goodbye
+- story: Finding Restaurants3
+  steps:
+  - intent: ask_location
+    entities:
+    - cuisine: Indian
+    - location: hyderabad
+  - slot_was_set:
+    - cuisine: Indian
+  - slot_was_set:
+    - location: hyderabad
+  - action: action_find_restaurants
+  - slot_was_set:
+    - restaurants:
+      - urba Tadka
+      - Goilas Butter chicken
+      - Shiv sagar
+  - intent: goodbye
+  - action: utter_goodbye
+- story: Finding Restaurants4
+  steps:
+  - intent: ask_location
+    entities:
+    - cuisine: Indian
+    - location: hyderabad
+  - slot_was_set:
+    - cuisine: Indian
+  - slot_was_set:
+    - location: hyderabad
+  - action: action_find_restaurants
+  - slot_was_set:
+    - restaurants:
+      - urba Tadka
+      - Goilas Butter chicken
+      - Shiv sagar
+- story: Finding Restaurants5
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_cuisine
+    entities:
+    - cuisine: mexican
+  - slot_was_set:
+    - cuisine: mexican
+  - action: utter_ask_location
+  - intent: ask_location
+    entities:
+    - location: gangtok
+  - slot_was_set:
+    - location: gangtok
+  - action: action_find_restaurants
+  - slot_was_set:
+    - restaurants:
+      - urba Tadka
+      - Goilas Butter chicken
+      - Shiv sagar
+  - intent: goodbye
+  - action: utter_goodbye
+- story: Finding Restaurants6
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: what_is_your_name
+  - action: utter_what_is_your_name
+  - intent: what_can_you_do
+  - action: utter_what_can_you_do
+  - intent: ask_location
+    entities:
+    - cuisine: Indian
+    - location: hyderabad
+  - slot_was_set:
+    - cuisine: Indian
+  - slot_was_set:
+    - location: hyderabad
+  - action: action_find_restaurants
+  - slot_was_set:
+    - restaurants:
+      - urba Tadka
+      - Goilas Butter chicken
+      - Shiv sagar
+  - intent: goodbye
+  - action: utter_goodbye
+- story: Finding Restaurants7
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: what_is_your_name
+  - action: utter_what_is_your_name
+  - intent: what_can_you_do
+  - action: utter_what_can_you_do
+  - intent: restaurant
+  - action: utter_ask_location
+  - intent: dont_know_location
+  - action: utter_dont_know_location
+  - intent: goodbye
+  - action: utter_goodbye
+- story: Finding Restaurants8
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant
+  - action: utter_ask_location
+  - intent: deny
+  - action: utter_dont_know_location
+  - intent: goodbye
+  - action: utter_goodbye
+- story: Finding Restaurants9
+  steps:
+  - intent: ask_cuisine
+    entities:
+    - cuisine: italian
+  - action: utter_ask_location
+  - intent: dont_know_location
+  - action: utter_dont_know_location
+  - intent: goodbye
+  - action: utter_goodbye
+- story: Finding Restaurants10
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: goodbye
+  - action: utter_goodbye
+- story: Finding Restaurants11
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: what_can_you_do
+  - action: utter_what_can_you_do
+  - intent: restaurant
+  - action: utter_ask_location
+  - intent: ask_location
+    entities:
+    - location: hyderabad
+  - slot_was_set:
+    - location: hyderabad
+  - action: utter_ask_cuisine
+  - intent: ask_cuisine
+    entities:
+    - cuisine: italian
+  - slot_was_set:
+    - cuisine: italian
+  - action: action_find_restaurants
+  - slot_was_set:
+    - restaurants:
+      - urba Tadka
+      - Goilas Butter chicken
+      - Shiv sagar
+  - intent: thankyou
+  - action: utter_welcome
+  - intent: ask_cuisine
+  - action: utter_ask_cuisine
+  - intent: ask_cuisine
+    entities:
+    - cuisine: chinese
+  - action: action_find_restaurants
+  - slot_was_set:
+    - restaurants:
+      - urba Tadka
+      - Goilas Butter chicken
+      - Shiv sagar
+  - slot_was_set:
+    - cuisine: null
+  - intent: thankyou
+  - action: utter_welcome
+  - intent: goodbye
+  - action: utter_goodbye
+- story: Finding Restaurants12
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: what_is_your_name
+  - action: utter_what_is_your_name
+  - intent: what_can_you_do
+  - action: utter_what_can_you_do
+  - intent: restaurant
+  - action: utter_ask_location
+  - intent: ask_location
+    entities:
+    - location: hyderabad
+  - slot_was_set:
+    - location: hyderabad
+  - action: utter_ask_cuisine
+  - intent: ask_cuisine
+    entities:
+    - cuisine: italian
+  - slot_was_set:
+    - cuisine: italian
+  - action: action_find_restaurants
+  - slot_was_set:
+    - restaurants:
+      - urba Tadka
+      - Goilas Butter chicken
+      - Shiv sagar
+  - intent: thankyou
+  - action: utter_welcome
+  - intent: goodbye
+  - action: utter_goodbye
+- story: Finding Restaurants13
+  steps:
+  - action: utter_when_direct_location
+  - intent: ask_location
+    entities:
+    - location: chennai
+  - slot_was_set:
+    - location: chennai
+  - intent: not_restaurant
+  - action: utter_what_is_your_name
+  - action: utter_what_can_you_do
+  - intent: goodbye
+  - action: utter_goodbye
+- story: Finding Restaurants14
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant
+  - intent: current_location
+  - action: utter_current_location
+  - intent: affirm
+  - action: utter_ask_cuisine
+  - intent: ask_cuisine
+    entities:
+    - cuisine: italian
+  - slot_was_set:
+    - location: italian
+  - action: utter_ask_location
+  - intent: thankyou
+  - action: utter_welcome
+  - intent: goodbye
+  - action: utter_goodbye
+- story: Finding Restaurants15
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant
+  - action: utter_ask_location
+  - intent: current_location
+  - action: utter_current_location
+  - intent: dont_know_location
+  - action: utter_dont_know_location
+  - intent: goodbye
+  - action: utter_goodbye
+- story: Finding Restaurants16
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant
+  - action: utter_ask_location
+  - intent: ask_location
+    entities:
+    - location: hyderabad
+  - slot_was_set:
+    - location: hyderabad
+  - action: utter_ask_cuisine
+  - intent: no_cuisine_preference
+  - action: action_find_restaurants
+  - slot_was_set:
+    - restaurants:
+      - urba Tadka
+      - Goilas Butter chicken
+      - Shiv sagar
+  - intent: goodbye
+  - action: utter_goodbye
+- story: Finding Restaurants18
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: what_can_you_do
+  - action: utter_what_can_you_do
+  - intent: restaurant
+  - action: utter_ask_location
+  - intent: ask_location
+    entities:
+    - location: chennai
+  - action: utter_ask_cuisine
+  - slot_was_set:
+    - cuisine: indian
+  - intent: ask_cuisine
+    entities:
+    - cuisine: indian
+  - action: action_find_restaurants
+  - slot_was_set:
+    - restaurants:
+      - urba Tadka
+      - Goilas Butter chicken
+      - Shiv sagar
+- story: Finding Restaurants21
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: what_can_you_do
+  - action: utter_what_can_you_do
+  - intent: ask_location
+    entities:
+    - cuisine: italian
+    - location: hyderabad
+  - slot_was_set:
+    - cuisine: italian
+  - action: action_find_restaurants
+  - slot_was_set:
+    - restaurants:
+      - Bawarchi
+      - Cafe Bahar
+      - Shah Ghouse Hotel & Restaurant
+      - Lucky Restaurant
+      - Hotel Shadab
+  - action: action_find_restaurants
+  - slot_was_set:
+    - cuisine: null
+  - intent: ask_cuisine
+    entities:
+    - cuisine: south indian
+  - slot_was_set:
+    - cuisine: south indian
+  - action: action_find_restaurants
+  - slot_was_set:
+    - cuisine: null
+  - action: action_find_restaurants
+  - slot_was_set:
+    - cuisine: null
+- story: Finding Restaurants22
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - slot_was_set:
+    - location: hyderabad
+  - slot_was_set:
+    - cuisine: italian
+  - intent: ask_location
+    entities:
+    - location: hyderabad
+    - cuisine: italian
+  - action: action_find_restaurants
+  - slot_was_set:
+    - restaurants: null
+  - action: action_find_restaurants
+  - slot_was_set:
+    - cuisine: null
