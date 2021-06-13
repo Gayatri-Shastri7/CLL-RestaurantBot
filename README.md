@@ -8,6 +8,6 @@
 
 <h4>Issues faced in phase-I:</h4>
 <h5>1. Had problems using Zomato API's. I was getting 500 Server Error, while using only request in python code.(Curl was working fine)<br>
-Solved it by adding header = {"User-agent": "curl/7.43.0", "Accept": "application/json", "user_key": "YOUR_API_USER_KEY"}
+Solved it by adding header = {"User-agent": "curl/7.43.0", "Accept": "application/json", "user_key": "YOUR_API_USER_KEY"}<br>
 </h5>
 <h2>PHASE - II In Progress</h2>
