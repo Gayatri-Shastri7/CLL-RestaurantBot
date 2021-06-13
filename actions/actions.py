@@ -84,7 +84,7 @@ class  ActionFindRestaurants(Action):
 		res = requests.request("GET", url, headers=headers, data=payload)
 		if res.status_code == 200:
 			restaurants = self.parse_search(res.json()['restaurants'])
-			out_greet_msg = '*Here are top 5 results for {} in {}*'.format(cuisine, location)
+			out_greet_msg = '*Here are top  results for {} in {}*'.format(cuisine, location)
 			dispatcher.utter_message(out_greet_msg)
 			print(len(restaurants))
 
