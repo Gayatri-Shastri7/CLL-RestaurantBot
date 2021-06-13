@@ -4,17 +4,13 @@
 # See this guide on how to implement these action:
 # https://rasa.com/docs/rasa/custom-actions
 
-import logging
+
 import requests
 import json
 from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.events import SlotSet
 from rasa_sdk.executor import CollectingDispatcher
-import random
-
-
-logger = logging.getLogger(__name__)
 
 class  ActionFindRestaurants(Action):
 	def name(self):
