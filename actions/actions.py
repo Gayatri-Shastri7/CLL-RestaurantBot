@@ -16,15 +16,6 @@ import random
 
 logger = logging.getLogger(__name__)
 
-
-ZOMATO_API_KEY = 'dc4f13f34b2754f1b044d01e36008001'
-API_URL = 'https://developers.zomato.com/api/v2.1/'
-HEADERS = {
-'User-agent': 'curl/7.43.0', 
-'Accept': 'application/json',
-'user_key': ZOMATO_API_KEY
-}
-
 class  ActionFindRestaurants(Action):
 	def name(self):
 	
@@ -84,7 +75,7 @@ class  ActionFindRestaurants(Action):
 		res = requests.request("GET", url, headers=headers, data=payload)
 		if res.status_code == 200:
 			restaurants = self.parse_search(res.json()['restaurants'])
-			out_greet_msg = '*Here are top  results for {} in {}*'.format(cuisine, location)
+			out_greet_msg = '*Here are top results for {} in {}*'.format(cuisine, location)
 			dispatcher.utter_message(out_greet_msg)
 			print(len(restaurants))
 
