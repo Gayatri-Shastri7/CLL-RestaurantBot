@@ -39,9 +39,12 @@ intents:
     use_entities: true
 - not_restaurant:
     use_entities: true
+- phone_number:
+    use_entities: true    
 entities:
 - cuisine
 - location
+- time
 slots:
   cuisine:
     type: rasa.shared.core.slots.TextSlot
@@ -54,6 +57,11 @@ slots:
     auto_fill: true
     influence_conversation: true
   location:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  time:
     type: rasa.shared.core.slots.TextSlot
     initial_value: null
     auto_fill: true
@@ -100,7 +108,15 @@ responses:
   - text: Sorry,I cannot find the results for the cuisine you mentioned.May be you can visit our restaurant for more information.
   utter_sorry_location:
   - text: Sorry,our sevice is not available for the location that you provided.
+  utter_time:
+  - text: It is {time}.
+  utter_ask_phone_num:
+  - text: please share your contact number.
+  utter_ask_number_booking_status:
+  - text: Please share your number to get the booking status
+
 actions:
 - action_find_restaurants
+- action_check_booking_status
 forms: {}
 e2e_actions: []
