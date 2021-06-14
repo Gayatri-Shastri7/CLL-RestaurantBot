@@ -67,6 +67,7 @@ nlu:
     - good to see you
     - okayyyy
     - Wow!
+    - wow
 - intent: deny
   examples: |
     - no
@@ -133,6 +134,7 @@ nlu:
     - what is your work
     - can  u help me?
     - What can you do for me?
+    - What can you do?
 - intent: what_is_your_name
   examples: |
     - Dude,what is your name?
@@ -307,6 +309,7 @@ nlu:
     - [indian](cuisine)
     - hmm,how about [italian](cuisine)
     - I want to have [italian](cuisine) foods
+    - I want [mexican](cuisine) cusine
 - intent: no_cuisine_preference
   examples: |
     - i don't know what to eat
@@ -328,6 +331,7 @@ nlu:
     - No,i am not
     - What cuisine is the best?
     - don't know
+    - I want food
 - intent: thankyou
   examples: |
     - Thank you
@@ -337,6 +341,25 @@ nlu:
     - thx
     - you helped me a lot
     - thank you
+    - Thanks
+- intent: ask_time
+  examples: |
+    - what time is right now?
+    - what day is it today?
+    - what's today ?
+    - what's yesterday ?
+- intent: get_phone_number
+  examples: |
+    - My phone number is [9819819811](phone_number)
+    - Phone number is [7892345671](phone_number)
+    - [3457892311]
+    - [9819819811](phone_number)[8918918911](phone_number)
+    - My phone no is [9819819811](phone_number)
+- intent: get_booking_status
+  examples: |
+    - plz provide me booking status
+    - i want to know booking status
+    - can you please tell me my booking status
 - synonym: mumbai
   examples: |
     - mumbei
@@ -401,3 +424,8 @@ nlu:
 - synonym: korean
   examples: |
     - Korean
+- regex: phone_number
+  examples: |
+    - ^[789]\d{9}$
+
+

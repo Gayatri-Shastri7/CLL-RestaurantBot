@@ -407,3 +407,59 @@ stories:
   - action: action_find_restaurants
   - slot_was_set:
     - cuisine: null
+- story: Story from Conversation ID 15531b85e0f246c38d0833d11406dc80
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: no_cuisine_preference
+  - action: utter_ask_location
+  - intent: ask_location
+    entities:
+    - location: hyderabad
+  - slot_was_set:
+    - location: hyderabad
+  - action: action_find_restaurants
+  - intent: thankyou
+  - action: utter_welcome
+  - intent: goodbye
+  - action: utter_goodbye
+- story: Story from Conversation ID bd5434c256ca4ceb8078f96ecda7409c
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: greet
+  - action: utter_greet
+  - intent: what_can_you_do
+  - action: utter_what_can_you_do
+  - intent: affirm
+  - action: utter_current_location
+  - intent: ask_cuisine
+    entities:
+    - cuisine: mexican
+  - slot_was_set:
+    - cuisine: mexican
+  - action: utter_ask_location
+  - intent: ask_location
+    entities:
+    - location: hyderabad
+  - slot_was_set:
+    - location: hyderabad
+  - action: action_find_restaurants
+- story: ask time
+  steps:
+  - intent: ask_time
+  - action: utter_time
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: get_booking_status
+  - action: utter_ask_number_booking_status
+  - intent: get_phone_number
+    entities:
+    - phone_number: '9819819811'
+  - slot_was_set:
+    - phone_number: '9819819811'
+  - action: action_check_booking_status
+  - intent: goodbye
+  - action: utter_goodbye

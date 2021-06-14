@@ -3,14 +3,17 @@
 #
 # See this guide on how to implement these action:
 # https://rasa.com/docs/rasa/custom-actions
-
-
+import logging
 import requests
 import json
 from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.events import SlotSet
 from rasa_sdk.executor import CollectingDispatcher
+from .cuisines_restaurants import Booking_Status
+
+logger = logging.getLogger(__name__)
+
 
 class  ActionFindRestaurants(Action):
 	def name(self):
@@ -71,7 +74,7 @@ class  ActionFindRestaurants(Action):
 		res = requests.request("GET", url, headers=headers, data=payload)
 		if res.status_code == 200:
 			restaurants = self.parse_search(res.json()['restaurants'])
-			out_greet_msg = '*Here are top results for {} in {}*'.format(cuisine, location)
+			out_greet_msg = '*Here are top  results for {} in {}*'.format(cuisine, location)
 			dispatcher.utter_message(out_greet_msg)
 			print(len(restaurants))
 
@@ -89,3 +92,20 @@ class  ActionFindRestaurants(Action):
 			dispatcher.utter_message('FAILED.')
 		
 		return []
+
+class  ActionBookingStatus(Action):
+	def name(self):
+    	
+		return 'action_check_booking_status'
+
+	def run(self, dispatcher: CollectingDispatcher,
+			tracker: Tracker,
+			domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+			phone_number=tracker.get_slot('phone_number')
+			if phone_number in Booking_Status.keys():
+				message = Booking_Status[phone_number]
+				dispatcher.utter_message(message)
+			else:
+				dispatcher.utter_message('No Booking satus available!')    			 
+			return []

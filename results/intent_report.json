@@ -1,0 +1,164 @@
+{
+  "greet": {
+    "precision": 0.7727272727272727,
+    "recall": 0.85,
+    "f1-score": 0.8095238095238095,
+    "support": 20,
+    "confused_with": {
+      "what_can_you_do": 1,
+      "goodbye": 1
+    }
+  },
+  "deny": {
+    "precision": 0.3333333333333333,
+    "recall": 0.375,
+    "f1-score": 0.35294117647058826,
+    "support": 8,
+    "confused_with": {
+      "mood_unhappy": 1,
+      "greet": 1
+    }
+  },
+  "thankyou": {
+    "precision": 0.8333333333333334,
+    "recall": 0.625,
+    "f1-score": 0.7142857142857143,
+    "support": 8,
+    "confused_with": {
+      "what_can_you_do": 1,
+      "goodbye": 1
+    }
+  },
+  "ask_cuisine": {
+    "precision": 0.8431372549019608,
+    "recall": 0.86,
+    "f1-score": 0.8514851485148515,
+    "support": 50,
+    "confused_with": {
+      "deny": 2,
+      "restaurant": 1
+    }
+  },
+  "mood_unhappy": {
+    "precision": 0.75,
+    "recall": 0.6428571428571429,
+    "f1-score": 0.6923076923076924,
+    "support": 14,
+    "confused_with": {
+      "dont_know_location": 2,
+      "thankyou": 1
+    }
+  },
+  "mood_great": {
+    "precision": 0.8,
+    "recall": 0.5714285714285714,
+    "f1-score": 0.6666666666666666,
+    "support": 14,
+    "confused_with": {
+      "restaurant": 2,
+      "mood_unhappy": 2
+    }
+  },
+  "no_cuisine_preference": {
+    "precision": 0.5,
+    "recall": 0.3,
+    "f1-score": 0.37499999999999994,
+    "support": 20,
+    "confused_with": {
+      "restaurant": 4,
+      "dont_know_location": 3
+    }
+  },
+  "ask_location": {
+    "precision": 0.9090909090909091,
+    "recall": 0.9615384615384616,
+    "f1-score": 0.9345794392523366,
+    "support": 52,
+    "confused_with": {
+      "goodbye": 1,
+      "ask_cuisine": 1
+    }
+  },
+  "affirm": {
+    "precision": 0.4166666666666667,
+    "recall": 0.4166666666666667,
+    "f1-score": 0.4166666666666667,
+    "support": 12,
+    "confused_with": {
+      "goodbye": 3,
+      "mood_great": 1
+    }
+  },
+  "what_can_you_do": {
+    "precision": 0.7058823529411765,
+    "recall": 0.7058823529411765,
+    "f1-score": 0.7058823529411765,
+    "support": 17,
+    "confused_with": {
+      "what_is_your_name": 4,
+      "greet": 1
+    }
+  },
+  "restaurant": {
+    "precision": 0.6521739130434783,
+    "recall": 0.6,
+    "f1-score": 0.6250000000000001,
+    "support": 25,
+    "confused_with": {
+      "ask_location": 4,
+      "no_cuisine_preference": 2
+    }
+  },
+  "goodbye": {
+    "precision": 0.6,
+    "recall": 0.7058823529411765,
+    "f1-score": 0.6486486486486486,
+    "support": 17,
+    "confused_with": {
+      "greet": 2,
+      "affirm": 2
+    }
+  },
+  "current_location": {
+    "precision": 0.9,
+    "recall": 0.8181818181818182,
+    "f1-score": 0.8571428571428572,
+    "support": 11,
+    "confused_with": {
+      "restaurant": 1,
+      "dont_know_location": 1
+    }
+  },
+  "what_is_your_name": {
+    "precision": 0.8,
+    "recall": 0.9411764705882353,
+    "f1-score": 0.8648648648648648,
+    "support": 17,
+    "confused_with": {
+      "dont_know_location": 1
+    }
+  },
+  "dont_know_location": {
+    "precision": 0.7037037037037037,
+    "recall": 0.9047619047619048,
+    "f1-score": 0.7916666666666667,
+    "support": 21,
+    "confused_with": {
+      "what_can_you_do": 1,
+      "no_cuisine_preference": 1
+    }
+  },
+  "accuracy": 0.7483660130718954,
+  "macro avg": {
+    "precision": 0.7013365826494558,
+    "recall": 0.6852250494603437,
+    "f1-score": 0.6871107802635026,
+    "support": 306
+  },
+  "weighted avg": {
+    "precision": 0.744116321599898,
+    "recall": 0.7483660130718954,
+    "f1-score": 0.7412896136187348,
+    "support": 306
+  }
+}
