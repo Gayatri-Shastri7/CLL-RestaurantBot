@@ -5,5 +5,11 @@
 <h3>Please provide comments or suggestions for improving this bot</h3>
 
 <!-- ![image](https://user-images.githubusercontent.com/66173499/121783611-3a31ab80-cbcd-11eb-997c-492633736f57.png) -->
+<h3>Some of the conversations:</h3>
+
+![image](https://user-images.githubusercontent.com/66173499/121837223-afe36780-ccf2-11eb-8702-21b282e6269b.png)
+
+![image](https://user-images.githubusercontent.com/66173499/121837270-ca1d4580-ccf2-11eb-8880-89f70bb157fa.png)
+
 
 <h2>PHASE - II In Progress</h2>
