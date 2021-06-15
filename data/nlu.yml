@@ -68,6 +68,9 @@ nlu:
     - okayyyy
     - Wow!
     - wow
+    - Yes please
+    - Yes bot!
+    - Yes
 - intent: deny
   examples: |
     - no
@@ -165,7 +168,6 @@ nlu:
     - food
     - restaurant
     - i am hungry
-    - i want food
     - i am looking for delicious food
     - i am not in a good mood,i want some good food
     - may i get some recommendations for good food
@@ -181,6 +183,29 @@ nlu:
     - i am hungyr
     - yeah i knwo
     - i am hungey
+- intent: no_cuisine_preference
+  examples: |
+    - i want food
+    - i don't know what to eat
+    - anything is fine
+    - i want something to eat
+    - any suggestions in cuisines
+    - suggest me some cuisine
+    - help me choose my food
+    - no idea
+    - i have no idea
+    - i can't figure out
+    - hmmm
+    - anything that is delicious
+    - find me something
+    - order me anything
+    - like anything
+    - any food is fine
+    - nothing in special
+    - No,i am not
+    - What cuisine is the best?
+    - don't know
+    - I want food
 - intent: ask_location
   examples: |
     - i am at hyderabad
@@ -235,6 +260,7 @@ nlu:
     - [ahmedabad](location)
     - i want to eat [italian](cuisine) at [hyderabad](location)
     - show me restuarants
+    - [Mumbai]{"entity": "location", "value": "mumbai"}
 - intent: dont_know_location
   examples: |
     - i don't know my location
@@ -310,28 +336,7 @@ nlu:
     - hmm,how about [italian](cuisine)
     - I want to have [italian](cuisine) foods
     - I want [mexican](cuisine) cusine
-- intent: no_cuisine_preference
-  examples: |
-    - i don't know what to eat
-    - anything is fine
-    - i want something to eat
-    - any suggestions in cuisines
-    - suggest me some cuisine
-    - help me choose my food
-    - no idea
-    - i have no idea
-    - i can't figure out
-    - hmmm
-    - anything that is delicious
-    - find me something
-    - order me anything
-    - like anything
-    - any food is fine
-    - nothing in special
-    - No,i am not
-    - What cuisine is the best?
-    - don't know
-    - I want food
+    - i want [italian](cuisine) food
 - intent: thankyou
   examples: |
     - Thank you
@@ -353,13 +358,37 @@ nlu:
     - My phone number is [9819819811](phone_number)
     - Phone number is [7892345671](phone_number)
     - [3457892311]
-    - [9819819811](phone_number)[8918918911](phone_number)
     - My phone no is [9819819811](phone_number)
+    - [9819819811](phone_number)[9819819811](phone_number)
+- intent: telling_phonenum
+  examples: |
+    - [9819819811](phone_number)[9819819811](phone_number)
+    - i would like to book with the contact number [9819819811](phone_num)
+    - please book with [1234567890](phone_num)
+    - kindly book with [2345678901](phone_num)
+    - yeah plz write it [7111111111](phone_num)
+    - ok write it bot [8918918912](phone_num)
+    - its [9879879871](phone_num)
 - intent: get_booking_status
   examples: |
     - plz provide me booking status
     - i want to know booking status
     - can you please tell me my booking status
+    - Please provide booking status
+- intent: telling_numpeople
+  examples: |
+    - please book table for [5](num_people) people
+    - please book a table for [10](num_people) people
+    - yes plz book table for [2](num_people) people
+    - can i have table for [2](num_people) guys
+    - [4](num_people) persons
+    - table for [2](num_people) people
+    - book for [8](num_people) please
+    - [15] no of people are coming
+    - i want table for [20](num_people) please
+    - group of [15](num_people) are coming
+    - [10](phone_number)
+    - [5](num_people) people
 - synonym: mumbai
   examples: |
     - mumbei
@@ -427,5 +456,3 @@ nlu:
 - regex: phone_number
   examples: |
     - ^[789]\d{9}$
-
-

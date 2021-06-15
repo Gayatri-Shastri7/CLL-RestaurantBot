@@ -40,11 +40,26 @@ intents:
 - not_restaurant:
     use_entities: true
 - phone_number:
-    use_entities: true    
+    use_entities: true
+- ask_time:
+    use_entities: true
+- get_phone_number:
+    use_entities: true
+- get_booking_status:
+    use_entities: true
+- telling_phonenum:
+    use_entities: true
+- telling_numpeople:
+    use_entities: true
+- nlu_fallback:
+    use_entities: true
 entities:
 - cuisine
 - location
 - time
+- phone_num
+- phone_number
+- num_people
 slots:
   cuisine:
     type: rasa.shared.core.slots.TextSlot
@@ -66,6 +81,26 @@ slots:
     initial_value: null
     auto_fill: true
     influence_conversation: true
+  phone_num:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  phone_number:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  num_people:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  requested_slot:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
 responses:
   utter_greet:
   - text: Hi, i am restaurant-bot.
@@ -86,6 +121,8 @@ responses:
   - text: I am restaurant-bot.
   utter_ask_location:
   - text: May i know your location?
+  utter_default:
+  - text: I'm sorry, I can't help you
   utter_dont_know_location:
   - text: Sorry,i can't help you with out any specified location.May be you can visit our website for further information.
   utter_ask_cuisine:
@@ -114,9 +151,30 @@ responses:
   - text: please share your contact number.
   utter_ask_number_booking_status:
   - text: Please share your number to get the booking status
-
+  utter_ask_num_people:
+  - text: Please, let me know the number of people coming.
+  utter_rephrase:
+  - text: I'm sorry, I didn't quite understand that. Could you rephrase?
+  utter_ask_for_booking:
+  - text: Shall I book a table?
+  utter_slot_values:
+  - text: |
+      The information recorded is:
+       - phone_no: {phone_num}
+       - num_people: {num_people}
 actions:
 - action_find_restaurants
 - action_check_booking_status
-forms: {}
+- utter_ask_phone_num
+- utter_ask_num_people
+- utter_ask_number_booking_status
+- utter_slot_values
+forms:
+  restaurant_form:
+    num_people:
+    - entity: num_people
+      type: from_entity
+    phone_num:
+    - entity: phone_num
+      type: from_entity
 e2e_actions: []

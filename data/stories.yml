@@ -463,3 +463,83 @@ stories:
   - action: action_check_booking_status
   - intent: goodbye
   - action: utter_goodbye
+- story: interactive_story_2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: greet
+  - action: utter_greet
+  - intent: what_can_you_do
+  - action: utter_what_can_you_do
+  - intent: affirm
+  - action: utter_current_location
+  - intent: ask_cuisine
+    entities:
+    - cuisine: mexican
+  - slot_was_set:
+    - cuisine: mexican
+  - action: utter_ask_location
+  - intent: ask_location
+    entities:
+    - location: hyderabad
+  - slot_was_set:
+    - location: hyderabad
+  - action: action_find_restaurants
+  - action: utter_ask_for_booking
+  - intent: affirm
+  - action: restaurant_form
+  - active_loop: restaurant_form
+  - slot_was_set:
+    - requested_slot: num_people
+  - slot_was_set:
+    - num_people: '5'
+  - slot_was_set:
+    - requested_slot: phone_num
+  - slot_was_set:
+    - phone_num: '9819819811'
+  - slot_was_set:
+    - phone_num: null
+  - active_loop: null
+  - action: utter_slot_values
+  - intent: goodbye
+  - action: utter_goodbye
+- story: Story from Conversation ID 9fc05d5c56474490b0e5342a84576c4d
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - slot_was_set:
+    - cuisine: italian
+  - intent: ask_cuisine
+    entities:
+    - cuisine: italian
+  - action: utter_ask_location
+  - slot_was_set:
+    - location: hyderabad
+  - intent: ask_location
+    entities:
+    - location: hyderabad
+  - action: action_find_restaurants
+  - action: utter_ask_for_booking
+  - intent: affirm
+  - action: utter_ask_phone_num
+  - intent: get_phone_number
+    entities:
+    - phone_number: '9819819811'
+    - phone_number: '9819819811'
+  - slot_was_set:
+    - phone_number: '9819819811'
+  - action: utter_ask_num_people
+  - intent: telling_numpeople
+    entities:
+    - num_people: '5'
+  - action: utter_slot_values
+  - intent: affirm
+  - intent: thankyou
+  - action: utter_welcome
+  - intent: get_booking_status
+  - action: action_check_booking_status
+  - intent: affirm
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_goodbye
+  - intent: goodbye
