@@ -13,3 +13,5 @@
 
 
 <h2>PHASE - II In Progress</h2>
+<h4>-Duckling ->(for date,time) extraction using docker</h4>
+<h4>-Forms -> for booking table(user input: phone no and no. of people)</h4>
