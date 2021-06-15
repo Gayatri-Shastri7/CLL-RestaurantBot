@@ -107,5 +107,5 @@ class  ActionBookingStatus(Action):
 				message = Booking_Status[phone_number]
 				dispatcher.utter_message(message)
 			else:
-				dispatcher.utter_message('No Booking satus available!')    			 
+				dispatcher.utter_message('No Booking status available!')    			 
 			return []
