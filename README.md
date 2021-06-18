@@ -25,5 +25,7 @@ The Rasa core and Rasa NLU are open source python libraries for creating convers
 
 ![image](https://user-images.githubusercontent.com/66173499/122521625-b0516a80-d032-11eb-9776-6b55440d2a41.png)
 
+  
+ <h3>How NLP Tool Works..</h3>
 
 ![image](https://user-images.githubusercontent.com/66173499/122521281-446f0200-d032-11eb-8b3a-d7781fe7d465.png)
