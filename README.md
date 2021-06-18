@@ -15,3 +15,9 @@
 <h2>PHASE - II In Progress</h2>
 <h4>-Duckling ->(for date,time) extraction using docker</h4>
 <h4>-Forms -> for booking table(user input: phone no and no. of people)</h4>
+
+<h2>PHASE - III Deploy In Facebook</h2>
+
+<h2> How RASA Chatbot Works? </h2>
+
+![image](https://user-images.githubusercontent.com/66173499/122521281-446f0200-d032-11eb-8b3a-d7781fe7d465.png)
