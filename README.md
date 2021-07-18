@@ -1,6 +1,6 @@
 # CLL-RestaurantBot
 <h3>Built this Restaurant Bot using RASA</h3>
-<h2>PHASE - I</h2>
+<h2>PHASE - I (done)</h2>
 <h4>It takes input from user location and cuisine and displays top  Restaurants with all available cuisines and it's rating.</h4>
 <h4>Please provide comments or suggestions for improving this bot</h4>
 
@@ -12,13 +12,13 @@
 ![image](https://user-images.githubusercontent.com/66173499/121837270-ca1d4580-ccf2-11eb-8880-89f70bb157fa.png)
 
 
-<h2>PHASE - II Done</h2>
+<h2>PHASE - II (Done)</h2>
 <h4>-Duckling ->(for date,time) extraction using docker</h4>
 <h4>-Forms -> for booking table(user input: phone no and no. of people)</h4>
 
-<h2>PHASE - III Deploy In Facebook In Progress</h2>
+<h2>PHASE - III Deploy In Facebook (In Progress)</h2>
 <br>
-<h2>PHASE - IV Deploy To AWS Server using Docker In Progress</h2>
+<h2>PHASE - IV Deploy To AWS Server using Docker (In Progress)</h2>
 
 <h2> How RASA Chatbot Works? </h2>
 <h3>How Dialogue Handling with Rasa Core can use LSTM by using Supervised and Reinforcement Learning Algorithm:<h3/>
