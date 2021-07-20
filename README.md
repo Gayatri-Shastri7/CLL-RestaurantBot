@@ -21,7 +21,11 @@
 <h4>-Duckling ->(for date,time) extraction using docker</h4>
 <h4>-Forms -> for booking table(user input: phone no and no. of people)</h4>
 
-<h2>PHASE - III Deploy In Facebook (In Progress)</h2>
+<h2>PHASE - III Deploy In Facebook (Done)</h2>
+
+<br>
+
+
 <br>
 <h2>PHASE - IV Deploy To AWS Server using Docker (In Progress)</h2>
 
