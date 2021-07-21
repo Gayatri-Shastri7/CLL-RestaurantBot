@@ -22,15 +22,15 @@
 <h4>-Forms -> for booking table(user input: phone no and no. of people)</h4>
 
 <h2>PHASE - III Deploy In Facebook (Done)</h2>
-<br>
+
 ![image](https://user-images.githubusercontent.com/66173499/126511962-fa2f5033-37f0-4eb9-936f-d43c889521fc.png)
-<br>
+
 ![image](https://user-images.githubusercontent.com/66173499/126512082-0bb99a2c-b544-4ed5-9731-768480ed82d7.png)
-<br>
+
 ![image](https://user-images.githubusercontent.com/66173499/126512208-48024184-f6d9-4b69-830b-7f2ddb0e6cd0.png)
-<br>
+
 ![image](https://user-images.githubusercontent.com/66173499/126512304-dcf48725-29d3-4cb0-a5a8-ab064ce554da.png)
-<br>
+
 
 
 <br>
