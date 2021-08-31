@@ -1,5 +1,5 @@
 # CLL-RestaurantBot
-<h3>Built this Restaurant Bot using RASA</h3>
+<h3>Built this Restaurant Bot using Python framework</h3>
 <h2>PHASE - I (done)</h2>
 <h3>STEP 1:</h3>
 <h4>Used ZOMATO API.With help of Postman I checked attributes which can be used to fetch Restaurants, cuisines and its rating.</h4>
