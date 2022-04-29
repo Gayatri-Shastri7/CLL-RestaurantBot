@@ -15,17 +15,6 @@ It is exemplary because its available 24/7, Marketing via Facebook Messenger,  N
 <h4>3. Docker</h4>
 <h4>4. Ngrok</h4>
 
-<h4>..........................................................................................................................................................................</h4>
-<h3>Built this Restaurant Bot using Python framework</h3>
-<h2>PHASE - I (done)</h2>
-<h3>STEP 1:</h3>
-<h4>Used ZOMATO API.With help of Postman I checked attributes which can be used to fetch Restaurants, cuisines and its rating.</h4>
-<h3>STEP 2:</h3>
-<h4>Wrote python script to fetch required results.</h4>
-<h3>OUTPUT:</h3>
-<h4>It takes input from user location and cuisine and displays top  Restaurants with all available cuisines and it's rating.</h4>
-
-<h2>Steps To Install:</h2>
 
 ## How To:
 #### Execute the following in Anaconda Prompt:
@@ -49,6 +38,18 @@ python -m rasa init
 
 python -m rasa x
 ```
+<h4>..........................................................................................................................................................................</h4>
+<h2>PHASE - I (done)</h2>
+<h3>STEP 1:</h3>
+<h4>Used ZOMATO API.With help of Postman I checked attributes which can be used to fetch Restaurants, cuisines and its rating.</h4>
+<h3>STEP 2:</h3>
+<h4>Wrote python script to fetch required results.</h4>
+<h3>OUTPUT:</h3>
+<h4>It takes input from user location and cuisine and displays top  Restaurants with all available cuisines and it's rating.</h4>
+
+<h2>Steps To Install:</h2>
+
+
 
 <!-- ![image](https://user-images.githubusercontent.com/66173499/121783611-3a31ab80-cbcd-11eb-997c-492633736f57.png) -->
 <h3>Some of the conversations:</h3>
