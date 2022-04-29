@@ -45,16 +45,6 @@ conda install ujson==1.35
 
 pip install --use-deprecated=legacy-resolver --user rasa-x --extra-index-url https://pypi.rasa.com/simple 1
 
-pip install PyJWT==2.0.0
-
-pip install aiohttp==3.6.3
-
-pip install multidict==4.7.6
-
-pip install pytz==2020.5
-
-pip install SQLAlchemy==1.3.19
-
 python -m rasa init
 
 python -m rasa x
