@@ -4,7 +4,7 @@
 <h4>2. RASA Framework</h4>
 <h4>3. Docker</h4>
 <h4>4. Ngrok</h4>
-<h4>5. Deploy To AWS Server using Docker(In Progress)</h4>
+
 <h4>..........................................................................................................................................................................</h4>
 <h3>Built this Restaurant Bot using Python framework</h3>
 <h2>PHASE - I (done)</h2>
@@ -41,7 +41,6 @@
 
 
 <br>
-<h2>PHASE - IV Deploy To AWS Server using Docker (In Progress)</h2>
 
 <h2> How RASA Chatbot Works? </h2>
 <h3>How Dialogue Handling with Rasa Core can use LSTM by using Supervised and Reinforcement Learning Algorithm:<h3/>
