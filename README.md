@@ -1,3 +1,12 @@
+<h1>!! Real Time Solution For Zomato !!</h1>
+
+# About The Project 
+ This is a conversational AI based chatbot built using Python.Using sophisticated deep learning and natural language understanding (NLU), it can elevate a customer’s experience into something truly transformational. Customers no longer have to feel the frustration of primitive chatbot solutions that often fall short due to narrow scope and limitations.
+                       With this conversational AI based Foodbot, one can go beyond just translating website content into simple chatbot responses. Here, customers can book restaurants, Order food, Reserve tables, Ask queries regarding food, restaurants and much more - directly from the chat window.
+
+It is exemplary because its available 24/7, Marketing via Facebook Messenger,  No downloads required,Provides Natural language responses, pre-trained on thousands of industry-specific customer intents, Unlimited scalability,Automatic Semantic Understanding (ASU), Entity extraction and Compatible with any API.
+
+<br>
 
 # CLL-RestaurantBot
 <h2>TECH STACK:</h2>
