@@ -1,3 +1,4 @@
+
 # CLL-RestaurantBot
 <h2>TECH STACK:</h2>
 <h4>1. Python</h4>
@@ -15,6 +16,40 @@
 <h3>OUTPUT:</h3>
 <h4>It takes input from user location and cuisine and displays top  Restaurants with all available cuisines and it's rating.</h4>
 
+<h2>Steps To Install:</h2>
+
+## How To:
+#### Execute the following in Anaconda Prompt:
+<br>
+
+```
+
+mkdir rasapro1
+
+cd rasapro1
+
+conda create -n rasavirtualenv python=3.8
+
+conda activate rasavirtualenv
+
+conda install ujson==1.35
+
+pip install --use-deprecated=legacy-resolver --user rasa-x --extra-index-url https://pypi.rasa.com/simple 1
+
+pip install PyJWT==2.0.0
+
+pip install aiohttp==3.6.3
+
+pip install multidict==4.7.6
+
+pip install pytz==2020.5
+
+pip install SQLAlchemy==1.3.19
+
+python -m rasa init
+
+python -m rasa x
+```
 
 <!-- ![image](https://user-images.githubusercontent.com/66173499/121783611-3a31ab80-cbcd-11eb-997c-492633736f57.png) -->
 <h3>Some of the conversations:</h3>
