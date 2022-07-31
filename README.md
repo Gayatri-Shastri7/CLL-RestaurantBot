@@ -1,4 +1,3 @@
-<h1>!! Real Time Solution For Zomato !!</h1>
 
 # About The Project 
  This is a conversational AI based chatbot built using Python.Using sophisticated deep learning and natural language understanding (NLU), it can elevate a customer’s experience into something truly transformational. Customers no longer have to feel the frustration of primitive chatbot solutions that often fall short due to narrow scope and limitations.
